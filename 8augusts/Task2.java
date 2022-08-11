@@ -1,22 +1,25 @@
+import java.util.Scanner;
+
 class Main {
-  public static void main(String[] args) {
-    String message = "everyone loves java";
-    char[] charArray = message.toCharArray();
-    boolean foundSpace = true;
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String message = input.nextLine();
+        char[] charArray = message.toCharArray();
+        boolean foundSpace = true;
 
-    for(int i = 0; i < charArray.length; i++) {
+        for (int i = 0; i < charArray.length; i++) {
 
-      if(Character.isLetter(charArray[i])) {
+            if (Character.isLetter(charArray[i])) {
 
-      }
+            }
 
-      else {
-        foundSpace = true;
-      }
+            else {
+                foundSpace = true;
+            }
+        }
+
+        message = String.valueOf(charArray);
+
+        System.out.println(message.replaceAll(" ", ""));
     }
-
-    message = String.valueOf(charArray);
-    
-      System.out.println(message.replaceAll(" ", ""));
-  }
 }
